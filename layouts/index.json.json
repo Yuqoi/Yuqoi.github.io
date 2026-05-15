@@ -4,8 +4,8 @@
 {{- range $index, $page := $pages }}
 {
   "title": {{ $page.Title | jsonify }},
-  "content": {{ $page.Plain | jsonify }},
-  "permalink": {{ $page.RelPermalink | jsonify }}
+  "permalink": {{ $page.RelPermalink | jsonify }},
+  "section": {{ $page.Section | jsonify }}
 }
 {{ if ne (add $index 1) (len $pages) }},{{ end }}
 
