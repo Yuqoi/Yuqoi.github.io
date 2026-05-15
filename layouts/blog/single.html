@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+<article class="max-w-3xl mx-auto">
+
+    <header class="mb-10">
+
+        <p class="text-sm text-zinc-500 mb-3">
+            {{ .Date.Format "2006-01-02" }}
+        </p>
+
+        <h1 class="text-5xl font-bold leading-tight">
+            {{ .Title }}
+        </h1>
+
+    </header>
+
+    {{ with .Params.tags }}
+
+    <div class="flex gap-2 mb-10 flex-wrap">
+
+        {{ range . }}
+
+        <span class="px-3 py-1 rounded-full bg-zinc-900 text-sm text-zinc-300">
+            #{{ . }}
+        </span>
+
+        {{ end }}
+
+    </div>
+
+    {{ end }}
+
+    <section class="prose prose-zinc max-w-none">
+        {{ .Content }}
+    </section>
+
+</article>
+
+{{ end }}
