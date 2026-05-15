@@ -1,0 +1,13 @@
+[
+{{- $pages := where .Site.RegularPages "Section" "in" (slice "blog" "projects") -}}
+
+{{- range $index, $page := $pages }}
+{
+  "title": {{ $page.Title | jsonify }},
+  "content": {{ $page.Plain | jsonify }},
+  "permalink": {{ $page.RelPermalink | jsonify }}
+}
+{{ if ne (add $index 1) (len $pages) }},{{ end }}
+
+{{ end }}
+]
