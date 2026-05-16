@@ -21,27 +21,61 @@
   </section>
 
   <h2 class="text-3xl font-semibold mb-6">
-    Latest Posts
+    Latest blogs
   </h2>
 
+  <div class="space-y-3 mb-8">
 
-  <section class="">
+    {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
 
+    <a href="${page.permalink}" class="
+            result-item
+            flex items-center gap-3
+            px-4 py-3 border border-zinc-900
+            group hover:bg-zinc-200 transition
+          ">
+      <i class="ti ti-user text-zinc-900 group-hover:text-zinc-600"></i>
+
+      <span class="group-hover:text-zinc-600">{{ .Title }}</span>
+
+      <div class="text-sm text-zinc-500 ml-auto">
+        <span class="ml-4">{{ .Date.Format "02-01-2006" }}</span>
+        <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
+      </div>
+    </a>
+
+
+    {{ end }}
+  </div>
+
+
+  <section class="mb-8">
     <h2 class="text-3xl font-semibold mb-2">
       Experience
     </h2>
 
     <ul class="relative space-y-2">
-      <div class="absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-700"></div>
+      <div class="absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-900"></div>
       {{ range .Site.Data.experience }}
       <li class="relative pl-8 md:pl-10">
-        <div class="absolute w-4 h-4 bg-zinc-700 transform top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
+        <div class="absolute w-4 h-4 bg-zinc-900 transform top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
         </div>
-        <div class="tezt-zinc-900 p-4">
-          <div class="flex flex-col gap-1">
-            <span class="font-medium">{{ .work_title }} / {{ .title }}</span>
-            <span class="text-sm">{{ .started_at}} - {{ .ended_at }} / {{ .type }} / {{ .location
-              }}</span>
+        <div class="text-zinc-900 p-4">
+          <div class="flex flex-col">
+            <div class="flex flex-row justify-between">
+              <span class="font-bold text-xl leading-none"> {{ .work_title }} </span>
+              <span>{{ .started_at }} - {{ .ended_at}}</span>
+            </div>
+            <span class="text-md">
+              {{ .title  }} 
+              {{ if .type }}
+                {{ printf "- %s" .type }}
+              {{ end }}
+              {{ if .location }}
+                {{ printf "- %s" .location }}
+              {{ end }}
+            </span>
+            <!-- <span class="text-sm">{{ .type }} / {{ .location }}</span> -->
           </div>
           <div class="prose text-zinc-900 mt-3 text-sm leading-relaxed">
             {{ .content | markdownify }}
@@ -51,5 +85,12 @@
       {{ end }}
     </ul>
   </section>
+
+
+  <h2 class="text-3xl font-semibold mb-6">
+    Achievements
+  </h2>
+
+
 </section>
 {{ end }}
