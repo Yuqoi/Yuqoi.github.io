@@ -1,0 +1,10 @@
+title: XXXIII Kaliski Konkurs Informatyczny
+started_at: 2024
+award: Distinction award
+content: |
+  Got a diploma for creating a mobile application called "Flora". 
+  It's stack is Android Studio (Java) and Firebase. 
+  It uses my model trained on google teachable machine to verify flower from taken photo. 
+  We can manage our flowers by setting notifications when to water 
+  (and predicting when to water next time) and set notes to them. 
+  It has rich database with all informations about each single of flower

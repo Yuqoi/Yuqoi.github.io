@@ -67,12 +67,12 @@
               <span>{{ .started_at }} - {{ .ended_at}}</span>
             </div>
             <span class="text-md">
-              {{ .title  }} 
+              {{ .title }}
               {{ if .type }}
-                {{ printf "- %s" .type }}
+              {{ printf "- %s" .type }}
               {{ end }}
               {{ if .location }}
-                {{ printf "- %s" .location }}
+              {{ printf "- %s" .location }}
               {{ end }}
             </span>
             <!-- <span class="text-sm">{{ .type }} / {{ .location }}</span> -->
@@ -91,6 +91,18 @@
     Achievements
   </h2>
 
+
+  <section class="space-y-4">
+    {{ range .Site.Data.achievements }}
+      <div class="flex flex-col text-zinc-900">
+        <span class="font-bold">{{.title}}</span>
+        <span class="font-light text-sm text-zinc-500">{{.started_at}} | {{ .award }}</span>
+        <div class="prose">
+            {{ .content | markdownify}}
+        </div>
+      </div>
+    {{ end }}
+  </section>
 
 </section>
 {{ end }}

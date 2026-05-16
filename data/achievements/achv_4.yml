@@ -1,0 +1,8 @@
+title: NASA Space Apps Hackathon 2024
+started_at: 2024
+award: Distinction award
+content: |
+  Built a web app with Django and Next.js to monitor environmental changes by 
+  comparing Landsat 8/9 data with ground observations. I handled the backend and Landsat data processing in Python,
+   integrated satellite data display (including WRS-2), and supported frontend development. 
+   Also used QGIS for satellite data visualization.
