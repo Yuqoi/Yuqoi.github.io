@@ -1,10 +1,5 @@
 {{ define "main" }}
-
-
-
 <section class="mb-20">
-
-
 
   <h1 class="text-5xl text-center font-bold">
     Aleksander Radłowski
@@ -15,7 +10,9 @@
   </p>
 
   <section class="mb-8">
-    <span class="text-zinc-400 text-sm">Some information about me</span>
+    <h2 class="text-3xl font-semibold mb-6">
+      Some information about me
+    </h2>
     <p class="text-justify">
       I've been programming for the past 6 years and i love everything about it!
       I love to create architecture / think about the structure of the code and being able to CODE and solve problems.
@@ -23,66 +20,36 @@
     </p>
   </section>
 
+  <h2 class="text-3xl font-semibold mb-6">
+    Latest Posts
+  </h2>
 
-  <section>
-    <span class="text-zinc-400 text-sm">Experience</span>
-    <ul class="text-zinc-900 bg-blue-500 space-y-4">
+
+  <section class="">
+
+    <h2 class="text-3xl font-semibold mb-2">
+      Experience
+    </h2>
+
+    <ul class="relative space-y-2">
+      <div class="absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-700"></div>
       {{ range .Site.Data.experience }}
-      <li class="flex flex-col h-fit bg-red-300">
-        <span>{{ .title }} - {{ .work_title }}</span>
-        <span>{{ .started_at }} - {{ .ended_at }}</span>
-        <div class="prose">
-          {{ .content | markdownify }}
+      <li class="relative pl-8 md:pl-10">
+        <div class="absolute w-4 h-4 bg-zinc-700 transform top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
+        </div>
+        <div class="tezt-zinc-900 p-4">
+          <div class="flex flex-col gap-1">
+            <span class="font-medium">{{ .work_title }} / {{ .title }}</span>
+            <span class="text-sm">{{ .started_at}} - {{ .ended_at }} / {{ .type }} / {{ .location
+              }}</span>
+          </div>
+          <div class="prose text-zinc-900 mt-3 text-sm leading-relaxed">
+            {{ .content | markdownify }}
+          </div>
         </div>
       </li>
       {{ end }}
     </ul>
   </section>
-
-
 </section>
-
-<!--
-<section class="mb-16">
-  <h2 class="text-3xl font-semibold mb-6">
-    Latest Posts
-  </h2>
-
-  <div class="space-y-3">
-
-    {{ range first 5 (where .Site.RegularPages "Section" "blog") }}
-
-    <a href="{{ .RelPermalink }}" class="block p-4 border border-zinc-800 rounded-xl hover:bg-zinc-900 transition">
-
-      <div class="flex justify-between items-center">
-        <span>{{ .Title }}</span>
-
-        <span class="text-sm text-zinc-500">
-          {{ .Date.Format "2006-01-02" }}
-        </span>
-      </div>
-
-    </a>
-
-    {{ end }}
-
-    {{ range first 2 (where .Site.RegularPages "Section" "projects") }}
-
-    <a href="{{ .RelPermalink }}" class="block p-4 border border-zinc-800 rounded-xl hover:bg-zinc-900 transition">
-
-      <div class="flex justify-between items-center">
-        <span>{{ .Title }}dobry</span>
-
-        <span class="text-sm text-zinc-500">
-          {{ .Date.Format "2006-01-02" }}
-        </span>
-      </div>
-
-    </a>
-
-    {{ end }}
-
-  </div> -->
-</section>
-
 {{ end }}

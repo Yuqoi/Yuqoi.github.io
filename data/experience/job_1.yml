@@ -3,6 +3,7 @@ started_at: Nov 2025
 ended_at: Feb 2026
 work_title: Software Developer
 type: Remote
+location: Warsaw
 content: |
   - Created an automated workflow of getting sentinel-2 data / imagery using Apache Airflow in python.
   - Labeled data using labelme and participated in creating a machine learning of a model for predicting object locations on satellite image
