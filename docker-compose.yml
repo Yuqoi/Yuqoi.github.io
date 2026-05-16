@@ -2,7 +2,7 @@ services:
   hugo:
     container_name: hugo
     restart: unless-stopped
-    image: hugomods/hugo:exts-non-root
+    image: hugomods/hugo:exts
     command: hugo server --bind 0.0.0.0 -D --poll 700 --noHTTPCache
     volumes:
       - ./:/src

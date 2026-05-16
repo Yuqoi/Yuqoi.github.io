@@ -1,0 +1,23 @@
+<footer class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-zinc-900">
+    <div class="py-6 border-t border-footer-line border-l-zinc-600">
+        <div class="flex flex-wrap justify-between items-center gap-2">
+            <div>
+                <p class="text-xs">
+                    <span id="footer-copyright"></span>
+                    <script>
+                        var footer_copyright = document.getElementById('footer-copyright');
+                        footer_copyright.innerHTML = '© ' + new Date().getFullYear() + " - All rights reserved"
+                    </script>
+                </p>
+            </div>
+
+            <ul class="flex flex-wrap items-center">
+                <li class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:inset-e-1.5 before:-translate-y-1/2 before:size-1 before:rounded-full before:bg-surface-3">
+                    <a href="https://github.com/Yuqoi" target="_blank" class="cursor-pointer hover:text-zinc-600">
+                        <i class="ti ti-brand-github text-2xl text-zinc-900"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

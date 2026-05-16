@@ -4,3 +4,5 @@ title = "Yuqoi"
 
 [outputs]
 home = ["HTML", "JSON"]
+
+disableKinds = ["taxonomy", "term"]
