@@ -4,7 +4,7 @@
 
 <section class="mb-20">
 
-  
+
 
   <h1 class="text-5xl text-center font-bold">
     Aleksander Radłowski
@@ -14,25 +14,35 @@
     I just love programming
   </p>
 
-  <section>
+  <section class="mb-8">
     <span class="text-zinc-400 text-sm">Some information about me</span>
     <p class="text-justify">
       I've been programming for the past 6 years and i love everything about it!
       I love to create architecture / think about the structure of the code and being able to CODE and solve problems.
       This is what fuels my entire life, i just love solving problems by coding.
-
-
-      <!-- I've been interested in programming since I was a child. 
-      I've always been fascinated by how things are built and how code works. 
-      I mainly focus on software development, mostly using Java/Python. 
-      I also have experience with web technologies (Next.js/React) and databases. 
-      I'm currently learning data analysis and building AI models. -->
     </p>
   </section>
 
+
+  <section>
+    <span class="text-zinc-400 text-sm">Experience</span>
+    <ul class="text-zinc-900 bg-blue-500 space-y-4">
+      {{ range .Site.Data.experience }}
+      <li class="flex flex-col h-fit bg-red-300">
+        <span>{{ .title }} - {{ .work_title }}</span>
+        <span>{{ .started_at }} - {{ .ended_at }}</span>
+        <div class="prose">
+          {{ .content | markdownify }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+
 </section>
 
-  <!--
+<!--
 <section class="mb-16">
   <h2 class="text-3xl font-semibold mb-6">
     Latest Posts
