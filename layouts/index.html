@@ -1,3 +1,5 @@
+
+
 {{ define "main" }}
 <section class="mb-8">
 
@@ -22,7 +24,7 @@
 
 
 
-  <div class="space-y-3 mb-6">
+  <div class="space-y-3 mb-12 overflow-hidden">
     <h2 class="text-3xl font-semibold mb-2">
       Latest blogs
     </h2>
@@ -30,6 +32,8 @@
     {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
 
     <a href="${page.permalink}" class="
+            blog-element
+            opacity-0
             flex items-center gap-3
             px-4 py-3 border border-zinc-900
             group hover:bg-zinc-200 transition
@@ -49,43 +53,43 @@
   </div>
 
 
-  <section class="mb-6">
+  <section class="mb-12">
     <h2 class="text-3xl font-semibold mb-2">
       Experience
     </h2>
     <ul class="relative space-y-2">
-      <div class="absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-900"></div>
+      <div class="reveal-line absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-900"></div>
+
       {{ range .Site.Data.experience }}
-      <li class="relative pl-8 md:pl-10">
-        <div class="absolute w-4 h-4 bg-zinc-900 transform top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full">
-        </div>
-        <div class="text-zinc-900 p-4">
-          <div class="flex flex-col">
-            <div class="flex flex-row justify-between">
-              <span class="font-bold text-xl leading-none"> {{ .work_title }} </span>
-              <span>{{ .started_at }} - {{ .ended_at}}</span>
+        <li class="reveal-up relative pl-2 md:pl-4">
+          <div class="text-zinc-900 p-4">
+            <div class="flex flex-col">
+              <div class="flex flex-row justify-between">
+                <span class="font-bold text-xl leading-none"> {{ .work_title }} </span>
+                <span>{{ .started_at }} - {{ .ended_at}}</span>
+              </div>
+              <span class="text-md">
+                {{ .title }}
+                {{ if .type }}
+                  {{ printf "- %s" .type }}
+                {{ end }}
+
+                {{ if .location }}
+                  {{ printf "- %s" .location }}
+                {{ end }}
+              </span>
             </div>
-            <span class="text-md">
-              {{ .title }}
-              {{ if .type }}
-              {{ printf "- %s" .type }}
-              {{ end }}
-              {{ if .location }}
-              {{ printf "- %s" .location }}
-              {{ end }}
-            </span>
+            <div class="prose text-zinc-900 mt-3 text-sm leading-relaxed">
+              {{ .content | markdownify }}
+            </div>
           </div>
-          <div class="prose text-zinc-900 mt-3 text-sm leading-relaxed">
-            {{ .content | markdownify }}
-          </div>
-        </div>
-      </li>
+        </li>
       {{ end }}
     </ul>
   </section>
 
 
-  <section class="space-y-2 mb-6">
+  <section class="space-y-2 mb-12">
     <h2 class="text-3xl font-semibold mb-2">
       Achievements
     </h2>
@@ -101,7 +105,7 @@
   </section>
 
 
-  <section class="space-y-4 mb-6">
+  <section class="space-y-4 mb-12">
     <h2 class="text-3xl font-semibold">
       Education
     </h2>
@@ -116,7 +120,7 @@
     {{ end }}
   </section>
 
-  <section class="space-y-4 mb-6">
+  <section class="space-y-4 mb-12">
     <h2 class="text-3xl font-semibold">
       Certifications
     </h2>
@@ -130,7 +134,7 @@
 
 
 
-  <section class="text-zinc-900 text-center mb-6">
+  <section class="text-zinc-900 text-center mb-12">
     <h2 class="text-3xl font-semibold">
       Want to partnership?
     </h2>

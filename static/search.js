@@ -1,23 +1,21 @@
-import { animate } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm"
+const { animate, stagger } = anime
 
 
 const modal = document.getElementById("search-modal")
 const openBtn = document.getElementById("open-search")
+
 openBtn.addEventListener("click", () => {
   modal.classList.remove("hidden")
   modal.classList.add("flex")
-  
-  animate(
-    "#search-modal > div",
-    {
-      opacity: [0, 1],
-      y: [-20, 0],
-      scale: [0.98, 1],
-    },
-    {
-      duration: 0.2,
-    }
-  )
+
+
+  animate(modal, {
+    opacity: [0, 1],
+    translateY: [-100, 0],
+    duration: 400,
+    ease: "inOutExpo",
+  })
+
 })
 
 modal.addEventListener("click", (e) => {
@@ -44,7 +42,7 @@ async function setupSearch() {
     const matches = pages.filter(page =>
       page.title.toLowerCase().includes(q)
     )
-  
+
     matches.forEach(page => {
 
       const icon =
@@ -56,6 +54,7 @@ async function setupSearch() {
         <a
           href="${page.permalink}"
           class="
+            search-result
             flex items-center gap-3
             px-4 py-3 border border-zinc-900
             group hover:bg-zinc-200 transition
@@ -68,6 +67,20 @@ async function setupSearch() {
           <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
         </a>
       `
+    })
+
+
+    const resultItems = results.querySelectorAll(".search-result")
+
+    resultItems.forEach((item) => {
+      item.style.opacity = "0"
+    })
+
+    animate(resultItems, {
+      opacity: [0, 1],
+      translateX: [-10, 0],
+      duration: 100,
+      ease: "inSine",
     })
   })
 }
