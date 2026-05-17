@@ -12,6 +12,8 @@ tech:
   - java
   - Docker
   - PostgreSQL
+
+header_image: /images/pp.jpg
 ---
 
 

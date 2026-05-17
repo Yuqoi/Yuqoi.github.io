@@ -56,7 +56,6 @@ async function setupSearch() {
         <a
           href="${page.permalink}"
           class="
-            result-item
             flex items-center gap-3
             px-4 py-3 border border-zinc-900
             group hover:bg-zinc-200 transition
