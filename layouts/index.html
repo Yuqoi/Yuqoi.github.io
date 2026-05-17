@@ -104,22 +104,6 @@
     {{ end }}
   </section>
 
-
-  <section class="space-y-4 mb-12">
-    <h2 class="text-3xl font-semibold">
-      Education
-    </h2>
-    {{ range .Site.Data.education }}
-    <div class="flex flex-col text-zinc-900">
-      <span class="font-bold">{{.title}}</span>
-      <span class="font-light text-sm text-zinc-500">{{.started_at}} - {{ .ended_at }}</span>
-      <div class="prose">
-        {{ .content | markdownify}}
-      </div>
-    </div>
-    {{ end }}
-  </section>
-
   <section class="space-y-4 mb-12">
     <h2 class="text-3xl font-semibold">
       Certifications
