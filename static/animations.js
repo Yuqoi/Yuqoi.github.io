@@ -1,10 +1,6 @@
 const { animate } = anime
 
-const revealElements = document.querySelectorAll(".reveal-up")
-revealElements.forEach((el) => {
-    el.style.opacity = "0"
-    el.style.transform = "translateY(32px)"
-})
+const revealElements = document.querySelectorAll(".experience-element")
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -31,7 +27,7 @@ revealElements.forEach((el) => {
 })
 
 
-const line = document.querySelector(".reveal-line")
+const line = document.querySelector(".experience-line")
 
 if (line) {
     line.style.transformOrigin = "top"
@@ -61,13 +57,22 @@ if (line) {
 
 const blogElements = document.querySelectorAll(".blog-element")
 
-// blogElements.forEach((item) => {
-//   item.style.opacity = "0"
-// })
-
 animate(blogElements, {
   opacity: [0, 1],
   translateY: [32, 0],
   duration: 150,
   ease: "linear",
+})
+
+
+const achvElements = document.querySelectorAll(".achv-element")
+
+achvElements.forEach((el) => {
+    observer.observe(el)
+})
+
+const certificateElements = document.querySelectorAll(".certificate-element")
+
+certificateElements.forEach((el) => {
+    observer.observe(el)
 })

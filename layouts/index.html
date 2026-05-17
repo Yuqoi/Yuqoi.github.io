@@ -58,10 +58,10 @@
       Experience
     </h2>
     <ul class="relative space-y-2">
-      <div class="reveal-line absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-900"></div>
+      <div class="experience-line absolute left-[7px] md:left-[11px] top-0 bottom-0 w-1 rounded-full bg-zinc-900"></div>
 
       {{ range .Site.Data.experience }}
-        <li class="reveal-up relative pl-2 md:pl-4">
+        <li class="experience-element relative pl-2 md:pl-4 opacity-0">
           <div class="text-zinc-900 p-4">
             <div class="flex flex-col">
               <div class="flex flex-row justify-between">
@@ -89,12 +89,12 @@
   </section>
 
 
-  <section class="space-y-2 mb-12">
+  <section class="space-y-2 mb-12 overflow-hidden">
     <h2 class="text-3xl font-semibold mb-2">
       Achievements
     </h2>
     {{ range .Site.Data.achievements }}
-    <div class="flex flex-col text-zinc-900">
+    <div class="flex flex-col text-zinc-900 achv-element opacity-0">
       <span class="font-bold">{{.title}}</span>
       <span class="font-light text-sm text-zinc-500">{{.started_at}} | {{ .award }}</span>
       <div class="prose">
@@ -125,7 +125,7 @@
       Certifications
     </h2>
     {{ range .Site.Data.certificates }}
-    <div class="flex flex-col text-zinc-900">
+    <div class="flex flex-col text-zinc-900 certificate-element opacity-0">
       <span class="font-bold">{{.title}}</span>
       <span class="font-light text-sm text-zinc-500">{{.started_at}}</span>
     </div>
