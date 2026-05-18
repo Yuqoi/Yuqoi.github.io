@@ -24,14 +24,13 @@
       <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
     </div>
 
-    <div class="w-full h-fit flex flex-row space-x-4">
+    <div class="w-full h-fit flex flex-row space-x-4 flex-wrap space-y-2">
       {{ range .Params.tags }}
-        <div class="bg-pink-300 rounded-full px-4 py-1">
+        <div class="bg-pink-300 rounded-full px-4 py-1 h-fit">
           {{ . }}
         </div>
       {{ end }}
     </div>
-
   </a>
 
 

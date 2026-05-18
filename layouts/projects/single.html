@@ -4,7 +4,7 @@
   <header class="mb-6">
 
     <p class="text-sm text-zinc-500">
-      {{ .Date.Format "2006-01-02" }}
+      {{ .Date.Format "02-01-2006" }}
     </p>
     <h1 class="text-5xl font-bold leading-none mb-2 text-zinc-900">
       {{ .Title }}
@@ -17,7 +17,7 @@
   </header>
 
   {{ if .Params.github }}
-    <section class="gap-4 mb-6 flex-wrap">
+  <section class="gap-4 mb-6 flex-wrap">
 
     <h2 class="text-2xl font-semibold mb-2">
       Links
@@ -44,7 +44,8 @@
 
       {{ range . }}
 
-      <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="px-3 py-1 rounded-full bg-pink-300 text-sm text-zinc-900">
+      <a href="{{ printf " /tags/%s/" (. | urlize) | relURL }}"
+        class="px-3 py-1 rounded-full bg-pink-300 text-sm text-zinc-900">
         #{{ . }}
       </a>
 
@@ -59,7 +60,7 @@
 
   {{ end }}
 
-  <section class="prose prose-zinc max-w-none text-justify text-zinc-900 marker:zinc-900">
+  <section class="prose max-w-none text-justify text-zinc-900 marker:zinc-900">
 
     {{ .Content }}
 

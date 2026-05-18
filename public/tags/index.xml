@@ -2,59 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yuqoi</title>
-    <link>http://localhost:1313/yuqoi-website/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Yuqoi</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 May 2026 23:57:40 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/yuqoi-website/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/yuqoi-website/tags/docker/</link>
+      <link>http://localhost:1313/tags/docker/</link>
       <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/docker/</guid>
+      <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/yuqoi-website/tags/java/</link>
+      <link>http://localhost:1313/tags/java/</link>
       <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/java/</guid>
+      <guid>http://localhost:1313/tags/java/</guid>
       <description></description>
     </item>
     <item>
-      <title>Javascript</title>
-      <link>http://localhost:1313/yuqoi-website/tags/javascript/</link>
+      <title>Nextjs</title>
+      <link>http://localhost:1313/tags/nextjs/</link>
       <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/nextjs/</guid>
       <description></description>
     </item>
     <item>
       <title>PostgreSQL</title>
-      <link>http://localhost:1313/yuqoi-website/tags/postgresql/</link>
+      <link>http://localhost:1313/tags/postgresql/</link>
       <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/postgresql/</guid>
+      <guid>http://localhost:1313/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spring Boot</title>
+      <link>http://localhost:1313/tags/spring-boot/</link>
+      <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
+      <guid>http://localhost:1313/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typescript</title>
+      <link>http://localhost:1313/tags/typescript/</link>
+      <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
+      <guid>http://localhost:1313/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XGBoost</title>
+      <link>http://localhost:1313/tags/xgboost/</link>
+      <pubDate>Thu, 14 May 2026 23:57:40 +0000</pubDate>
+      <guid>http://localhost:1313/tags/xgboost/</guid>
       <description></description>
     </item>
     <item>
       <title>C</title>
-      <link>http://localhost:1313/yuqoi-website/tags/c/</link>
+      <link>http://localhost:1313/tags/c/</link>
       <pubDate>Thu, 14 May 2026 23:57:26 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/c/</guid>
+      <guid>http://localhost:1313/tags/c/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/yuqoi-website/tags/go/</link>
+      <link>http://localhost:1313/tags/go/</link>
       <pubDate>Thu, 14 May 2026 23:57:26 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/go/</guid>
+      <guid>http://localhost:1313/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/yuqoi-website/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Thu, 14 May 2026 23:57:26 +0000</pubDate>
-      <guid>http://localhost:1313/yuqoi-website/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
   </channel>
