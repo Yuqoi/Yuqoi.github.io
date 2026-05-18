@@ -11,15 +11,13 @@
 {{ partial "searchbar.html" . }}
 
 
-<body>
+<body class="">
 
     {{ partial "nav.html" . }}
 
 
     <main class="max-w-3xl mx-auto px-6 py-10">
-        {{ block "main" . }}
-        
-        {{ end }}
+        {{ block "main" . }}{{ end }}
     </main>
 
 
