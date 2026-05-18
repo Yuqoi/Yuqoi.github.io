@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - deploy-test
   workflow_dispatch:
 
 permissions:
@@ -28,7 +29,6 @@ jobs:
       NODE_VERSION: 24.14.1
       HUGO_ENVIRONMENT: production
       HUGO_ENV: production
-      NODE_ENV: production
       TZ: Europe/Warsaw
 
     steps:
@@ -45,10 +45,12 @@ jobs:
           cache: npm
 
       - name: Install Node.js dependencies
-        run: npm ci
+        run: npm ci --include=dev
 
       - name: Build Tailwind CSS
         run: npm run tw:build
+        env:
+          NODE_ENV: production
 
       - name: Setup Pages
         id: pages
