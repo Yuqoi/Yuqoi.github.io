@@ -14,3 +14,7 @@ home = ["HTML", "JSON"]
     [markup.goldmark.renderer]
       unsafe = true
     
+[params]
+description = "Welcome on my own portfolio :)"
+keywords = ["blog", "projects", "Yuqoi", "Aleksander Radłowski", "software development", "programming"]
+author = "Yuqoi"

@@ -2,7 +2,7 @@
 date: "2026-05-14T23:57:26Z"
 draft: true
 title: "First Post"
-
+description: "just a first post"
 tags:
   - go
   - docker

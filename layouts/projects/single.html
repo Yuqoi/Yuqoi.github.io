@@ -24,7 +24,7 @@
     </h2>
 
     <a href="{{ .Params.github }}" target="_blank" class="cursor-pointer hover:text-zinc-600">
-      <i class="ti ti-brand-github text-3xl text-zinc-900 bg-pink-300 rounded-full px-2 py-1"></i>
+      <i class="ti ti-brand-github text-2xl text-zinc-900 bg-pink-300 rounded-full px-2 py-1"></i>
     </a>
 
   </section>
@@ -44,7 +44,7 @@
 
       {{ range . }}
 
-      <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="px-4 py-1 rounded-full bg-pink-300">
+      <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="px-3 py-1 rounded-full bg-pink-300 text-sm text-zinc-900">
         #{{ . }}
       </a>
 

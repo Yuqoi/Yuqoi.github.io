@@ -1,4 +1,3 @@
 ---
-title: "Yuqoi"
-description: "just a test"
+title: "Aleksander Radłowski portfolio"
 ---
