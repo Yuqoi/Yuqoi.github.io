@@ -19,9 +19,9 @@
 
         {{ range . }}
 
-        <span class="px-3 py-1 rounded-full bg-zinc-900 text-sm text-zinc-300">
+        <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="px-3 py-1 rounded-full bg-pink-400 text-sm text-zinc-900">
             #{{ . }}
-        </span>
+        </a>
 
         {{ end }}
 

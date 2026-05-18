@@ -9,7 +9,6 @@ tags:
   - linux
 ---
 
-
 # Agri velut fronde morata
 
 ## Ire et nec
@@ -19,6 +18,10 @@ Terea naturalique echidnae. Ramo illi veneratus pax, siquidem faciles, sed cum
 equidem flammis mugire foret, pendent mihi fluminis temeraria detinuit. Sensit
 calescit hastae aspera dixi puppe sic quis quisque et iunxit factum semine
 scitatur; rogant origine virum! Dei convivia vocant, ignarus quies.
+
+
+<img src="/images/pp.jpg" class="object-cover w-full h-48" alt="test">
+
 
 Peleu quidem tuos, in, ictu, et ille Aurora vidit ait. Fallare tam non Scythicis
 ab ieiunia plerumque.
