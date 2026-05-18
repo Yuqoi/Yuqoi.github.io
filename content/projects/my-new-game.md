@@ -41,5 +41,5 @@ I created my own predicting model based on the **XGBoost algorithm** based on <u
 - Automate with **apache airflow** to get new data everyday, so model can learn on new data:
   - of course if there are new matches on current day
 - refactor the architecture:
-  - current architecture acts as a **"microservice"** which is not bad but thats too much for a little project. I would like to keep everything as a **monolith** for its simplicity and redesign the main backend to be in python rather than spring boot despite my likness for spring boot :heart::kissing_closed_eyes:
+  - current architecture acts as a **"microservice"** which is not bad but thats too much for a little project. I would like to keep everything as a **monolith** for its simplicity and redesign the main backend to be in python rather than spring boot despite my liking to it :heart::kissing_closed_eyes:
 - Ship service to any cloud service
