@@ -27,29 +27,30 @@ jobs:
     env:
       HUGO_VERSION: 0.160.0
       NODE_VERSION: 24.14.1
+      HUGO_ENVIRONMENT: production
+      HUGO_ENV: production
       TZ: Europe/Warsaw
 
     steps:
-      - name: Checkout current branch
+      - name: Checkout
         uses: actions/checkout@v6
         with:
           submodules: recursive
           fetch-depth: 0
-          path: current
-
-      - name: Checkout main branch
-        if: github.ref == 'refs/heads/deploy-test'
-        uses: actions/checkout@v6
-        with:
-          ref: main
-          submodules: recursive
-          fetch-depth: 0
-          path: main-site
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install Node.js dependencies
+        run: npm ci --include=dev
+
+      - name: Build Tailwind CSS
+        run: npm run tw:build
+        env:
+          NODE_ENV: production
 
       - name: Setup Pages
         id: pages
@@ -63,61 +64,32 @@ jobs:
           rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
           echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
 
-      - name: Build main site from main branch
-        if: github.ref == 'refs/heads/deploy-test'
-        working-directory: main-site
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-          NODE_ENV: production
+      - name: Restore Hugo cache
+        uses: actions/cache/restore@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ github.run_id }}
+          restore-keys: |
+            hugo-
+
+      - name: Build Hugo site
         run: |
-          npm ci --include=dev
-          npm run tw:build
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --destination ../final-public \
-            --cacheDir "${{ runner.temp }}/hugo_cache_main"
+            --cacheDir "${{ runner.temp }}/hugo_cache"
 
-      - name: Build current branch as main site
-        if: github.ref == 'refs/heads/main'
-        working-directory: current
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-          NODE_ENV: production
-        run: |
-          npm ci --include=dev
-          npm run tw:build
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --destination ../final-public \
-            --cacheDir "${{ runner.temp }}/hugo_cache_main"
-
-      - name: Build deploy-test into /dev
-        if: github.ref == 'refs/heads/deploy-test'
-        working-directory: current
-        env:
-          HUGO_ENVIRONMENT: development
-          HUGO_ENV: development
-          NODE_ENV: production
-        run: |
-          npm ci --include=dev
-          npm run tw:build
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/dev/" \
-            --destination ../final-public/dev \
-            --cacheDir "${{ runner.temp }}/hugo_cache_dev"
+      - name: Save Hugo cache
+        uses: actions/cache/save@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ github.run_id }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./final-public
+          path: ./public
 
   deploy:
     environment:
