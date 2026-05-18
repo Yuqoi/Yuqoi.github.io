@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Yuqoi"
 enableEmoji = true
 
+enableRobotsTXT = true
+
 [outputs]
 home = ["HTML", "JSON"]
 
@@ -19,6 +21,7 @@ home = ["HTML", "JSON"]
 description = "Welcome on my own portfolio :)"
 keywords = ["blog", "projects", "Yuqoi", "Aleksander Radłowski", "software development", "programming"]
 author = "Yuqoi"
+favicon = "meta/favicon.png"
 
 [caches]
   [caches.images]

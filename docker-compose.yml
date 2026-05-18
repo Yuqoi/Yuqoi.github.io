@@ -14,7 +14,7 @@ services:
     working_dir: /src
     volumes:
       - .:/src
-    command: sh -c "npm install && npm run tw:build"
+    command: sh -c "npm install && npm run tw:dev"
 
 
 
