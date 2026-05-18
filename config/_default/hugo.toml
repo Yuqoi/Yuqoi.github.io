@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://Yuqoi.github.io/yuqoi-website/"
 languageCode = "en-us"
 title = "Yuqoi"
 
@@ -18,3 +18,7 @@ home = ["HTML", "JSON"]
 description = "Welcome on my own portfolio :)"
 keywords = ["blog", "projects", "Yuqoi", "Aleksander Radłowski", "software development", "programming"]
 author = "Yuqoi"
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
