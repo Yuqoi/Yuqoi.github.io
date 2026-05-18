@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $type := .Get "type" | default "video/mp4" }}
+{{ $class := .Get "class" | default "w-full rounded-xl" }}
+{{ $poster := .Get "poster" }}
+{{ $preload := .Get "preload" | default "metadata" }}
+
+<video
+  controls
+  preload="{{ $preload }}"
+  class="{{ $class }}"
+  {{ with $poster }}poster="{{ . | relURL }}"{{ end }}
+>
+  <source src="{{ $src | relURL }}" type="{{ $type }}">
+  Your browser does not support the video tag.
+</video>

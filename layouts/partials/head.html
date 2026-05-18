@@ -31,7 +31,7 @@
 {{ end }}
 
 {{ with $keywords }}
-<meta name="keywords" content="{{ delimit . ", " }}">
+<meta name="keywords" content="{{ delimit . " , " }}">
 {{ end }}
 
 {{ with $author }}
@@ -39,6 +39,9 @@
 {{ end }}
 
 
+{{ with (templates.Defer (dict "key" "global")) }}
+{{ partial "css.html" . }}
+{{ end }}
 
 <!-- <script>
     tailwind.config = {

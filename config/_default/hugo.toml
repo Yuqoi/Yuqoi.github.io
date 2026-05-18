@@ -1,6 +1,7 @@
-baseURL = "https://Yuqoi.github.io/yuqoi-website/"
+baseURL = "https://Yuqoi.github.io"
 languageCode = "en-us"
 title = "Yuqoi"
+enableEmoji = true
 
 [outputs]
 home = ["HTML", "JSON"]
@@ -22,3 +23,21 @@ author = "Yuqoi"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'

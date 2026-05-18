@@ -1,11 +1,11 @@
 {
- "scripts": {
-    "tw:dev": "tailwindcss -i ./assets/css/input.css -o ./static/css/output.css --watch",
-    "tw:build": "tailwindcss -i ./assets/css/input.css -o ./static/css/output.css --minify"
-  },
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.3.0",
-    "tailwindcss": "^4.3.0",
-    "@tailwindcss/typography": "0.5.19"
-  }
+    "scripts": {
+        "tw:dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./static/css/output.css --watch=always --pol",
+        "tw:build": "npx tailwindcss -i ./assets/css/input.css -o ./static/css/output.css --minify"
+    },
+    "devDependencies": {
+        "tailwindcss": "^4.3.0",
+        "@tailwindcss/cli": "^4.3.0",
+        "@tailwindcss/typography": "0.5.19"
+    }
 }
