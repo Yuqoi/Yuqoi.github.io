@@ -7,6 +7,7 @@ tags:
   - go
   - docker
   - linux
+  - c
 ---
 
 # Agri velut fronde morata

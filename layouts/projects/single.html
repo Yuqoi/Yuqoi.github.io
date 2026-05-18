@@ -1,64 +1,52 @@
 {{ define "main" }}
+<article class="">
 
-<article class="max-w-4xl mx-auto">
+  <header class="mb-6">
 
-  <header class="mb-12">
-
-    <h1 class="text-5xl font-bold mb-4">
+    <p class="text-sm text-zinc-500">
+      {{ .Date.Format "2006-01-02" }}
+    </p>
+    <h1 class="text-5xl font-bold leading-none mb-2 text-zinc-900">
       {{ .Title }}
     </h1>
 
-    {{ with .Params.description }}
-    <p class="text-xl text-zinc-400">
-      {{ . }}
+    <p class="text-xl text-zinc-900">
+      {{.Params.description}}
     </p>
-    {{ end }}
 
   </header>
 
-  <section class="flex gap-4 mb-10 flex-wrap">
+  {{ if .Params.github }}
+    <section class="gap-4 mb-6 flex-wrap">
 
-    {{ with .Params.github }}
+    <h2 class="text-2xl font-semibold mb-2">
+      Links
+    </h2>
 
-    <a
-      href="{{ . }}"
-      target="_blank"
-      class="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition"
-    >
-      GitHub
+    <a href="{{ .Params.github }}" target="_blank" class="cursor-pointer hover:text-zinc-600">
+      <i class="ti ti-brand-github text-3xl text-zinc-900 bg-pink-300 rounded-full px-2 py-1"></i>
     </a>
-
-    {{ end }}
-
-    {{ with .Params.demo }}
-
-    <a
-      href="{{ . }}"
-      target="_blank"
-      class="px-5 py-3 rounded-xl bg-zinc-100 text-black hover:bg-zinc-300 transition"
-    >
-      Live Demo
-    </a>
-
-    {{ end }}
 
   </section>
+  {{end}}
 
-  {{ with .Params.tech }}
 
-  <section class="mb-12">
 
-    <h2 class="text-2xl font-semibold mb-4">
-      Tech Stack
+  {{ with .Params.tags }}
+
+  <section class="mb-4 text-zinc-900">
+
+    <h2 class="text-2xl font-semibold mb-2">
+      What used / Tech stack
     </h2>
 
     <div class="flex flex-wrap gap-3">
 
       {{ range . }}
 
-      <span class="px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-800">
-        {{ . }}
-      </span>
+      <a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}" class="px-4 py-1 rounded-full bg-pink-300">
+        #{{ . }}
+      </a>
 
       {{ end }}
 
@@ -66,9 +54,12 @@
 
   </section>
 
+  <div class="border-t border-footer-line border-l-zinc-600 mb-6"></div>
+
+
   {{ end }}
 
-  <section class="prose prose-zinc max-w-none">
+  <section class="prose prose-zinc max-w-none text-justify text-zinc-900 marker:zinc-900">
 
     {{ .Content }}
 

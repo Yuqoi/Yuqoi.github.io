@@ -8,10 +8,11 @@ description: "A self-hosted dashboard built with Go."
 github: "https://github.com/yuqoi/flora"
 demo: "https://yuqoi.com"
 
-tech:
+tags:
   - java
   - Docker
   - PostgreSQL
+  - Javascript
 
 header_image: /images/pp.jpg
 ---

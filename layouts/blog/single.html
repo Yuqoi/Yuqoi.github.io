@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<article class="max-w-3xl mx-auto">
+<article class="">
 
     <header class="mb-6">
 
@@ -15,7 +15,7 @@
 
     {{ with .Params.tags }}
 
-    <div class="flex gap-2 mb-10 flex-wrap">
+    <div class="flex gap-2 mb-4 flex-wrap">
 
         {{ range . }}
 
@@ -29,7 +29,9 @@
 
     {{ end }}
 
-    <section class="prose prose-zinc max-w-none text-justify">
+    <div class="border-t border-footer-line border-l-zinc-600 mb-6"></div>
+
+    <section class="prose max-w-none text-justify text-zinc-900 marker:zinc-900">
         {{ .Content }}
     </section>
 
