@@ -1,8 +1,13 @@
+
+
 {{ define "main" }}
 
 <h1 class="text-4xl font-bold mb-10">
   Projects
 </h1>
+
+
+
 
 <div class="space-y-2">
 
@@ -23,7 +28,7 @@
       </div>
       <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
     </div>
-
+    <p class="text-left w-full text-sm">{{ .Description }}</p>
     <div class="w-full h-fit flex flex-row space-x-4 flex-wrap space-y-2">
       {{ range .Params.tags }}
         <div class="px-3 py-1 rounded-full bg-pink-300 text-sm text-zinc-900 h-fit">
