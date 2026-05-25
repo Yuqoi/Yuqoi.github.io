@@ -1,0 +1,10 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $class := .Get "class" | default "rounded-lg shadow-md" }}
+
+<img
+  src="{{ $src | relURL }}"
+  alt="{{ $alt }}"
+  class="{{ $class }}"
+  loading="lazy"
+/>
