@@ -3,8 +3,10 @@
     "tags": [
       "a",
       "article",
+      "blockquote",
       "body",
       "button",
+      "code",
       "div",
       "footer",
       "h1",
@@ -27,6 +29,7 @@
       "source",
       "span",
       "strong",
+      "style",
       "title",
       "u",
       "ul",
@@ -64,6 +67,7 @@
       "experience-line",
       "fixed",
       "flex",
+      "flex-1",
       "flex-col",
       "flex-row",
       "flex-wrap",
@@ -130,6 +134,7 @@
       "placeholder:text-zinc-100",
       "prose",
       "prose-zinc",
+      "px-2",
       "px-3",
       "px-4",
       "px-6",
@@ -159,6 +164,7 @@
       "text-5xl",
       "text-center",
       "text-justify",
+      "text-left",
       "text-lg",
       "text-md",
       "text-sm",
@@ -183,6 +189,7 @@
       "w-8",
       "w-fit",
       "w-full",
+      "warning",
       "whitespace-nowrap",
       "z-50"
     ],
@@ -195,8 +202,12 @@
       "results",
       "search",
       "search-modal",
+      "some-screenshots",
+      "the-repository-does-not-have-commits",
       "usage",
-      "what-does-this-project-even-do-"
+      "what-does-this-project-actually-do-",
+      "what-does-this-project-even-do-",
+      "why-did-i-make-it-"
     ]
   }
 }

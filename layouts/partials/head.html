@@ -14,12 +14,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
 
-<link rel="icon" type="image/png" href="{{ "meta/favicon-96x96.png" | relURL }}?v=2" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="{{ "meta/favicon.svg" | relURL }}?v=2" />
-<link rel="shortcut icon" href="{{ "meta/favicon.ico" | relURL }}?v=2" />
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "meta/apple-touch-icon.png" | relURL }}?v=2" />
+<link rel="icon" type="image/png" href="{{ " meta/favicon-96x96.png" | relURL }}?v=2" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="{{ " meta/favicon.svg" | relURL }}?v=2" />
+<link rel="shortcut icon" href="{{ " meta/favicon.ico" | relURL }}?v=2" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ " meta/apple-touch-icon.png" | relURL }}?v=2" />
 <meta name="apple-mobile-web-app-title" content="Yuqoi portfolio" />
-<link rel="manifest" href="{{ "meta/site.webmanifest" | relURL }}?v=2" />
+<link rel="manifest" href="{{ " meta/site.webmanifest" | relURL }}?v=2" />
 
 
 {{ $description := .Description | default .Site.Params.description }}
@@ -43,14 +43,24 @@
 {{ partial "css.html" . }}
 {{ end }}
 
-<!-- <script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                fontFamily: {
-                    sans: ['Poppins', 'sans-serif'],
-                }
-            }
-        }
+<style>
+    .warning {
+        background: oklch(97.3% 0.071 103.193);
+        color: oklch(79.5% 0.184 86.047);
+        border-left: 5px solid oklch(87.9% 0.169 91.605);
+        border-radius: 6px;
+        padding: 12px 16px;
+        margin: 16px 0;
     }
-</script> -->
+
+    .warning::before {
+        content: "Warning";
+        display: block;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+
+    .warning>p {
+        margin: 0;
+    }
+</style>

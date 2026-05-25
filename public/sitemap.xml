@@ -3,12 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-14T23:57:40+00:00</lastmod>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
-    <lastmod>2026-05-14T23:57:40+00:00</lastmod>
+    <loc>http://localhost:1313/tags/android/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/android-studio/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/firebase/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/flora/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/image-recognition/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/java/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mobile/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-05-25T22:25:48+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/docker/</loc>
     <lastmod>2026-05-14T23:57:40+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/nextjs/</loc>
@@ -20,16 +44,10 @@
     <loc>http://localhost:1313/tags/postgresql/</loc>
     <lastmod>2026-05-14T23:57:40+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2026-05-14T23:57:40+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2026-05-14T23:57:40+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/spring-boot/</loc>
-    <lastmod>2026-05-14T23:57:40+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-05-14T23:57:40+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/typescript/</loc>
