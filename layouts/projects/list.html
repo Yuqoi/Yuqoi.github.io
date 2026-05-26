@@ -1,47 +1,41 @@
-
-
 {{ define "main" }}
 
-<h1 class="text-4xl font-bold mb-10">
-  Projects
-</h1>
-
-
-
+<h1 class="text-4xl font-bold mb-10">Projects</h1>
 
 <div class="space-y-2">
-
   {{ range .Pages }}
 
-  <a href="{{ .RelPermalink }}" class="
-            flex items-center flex-col gap-3
-            px-4 py-3 border border-zinc-900
-            group hover:bg-zinc-200 transition
-            text-zinc-900
-            w-full
-          ">
-
+  <a
+    href="{{ .RelPermalink }}"
+    class="flex items-center flex-col gap-3 px-4 py-3 border border-zinc-900 group hover:bg-zinc-200 transition text-zinc-900 w-full"
+  >
     <div class="flex flex-row w-full items-center">
       <div class="flex flex-col justify-start w-full h-full">
-        <span class="group-hover:text-zinc-600 font-bold text-xl leading-none">{{ .Title }}</span>
-        <span class="text-xs group-hover:text-zinc-600">{{ .Date.Format "02-01-2006" }}</span>
+        <span class="group-hover:text-zinc-600 font-bold text-xl leading-none"
+          >{{ .Title }}</span
+        >
+        <span class="text-xs group-hover:text-zinc-600"
+          >{{ .Date.Format "02-01-2006" }}</span
+        >
       </div>
-      <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
+      <i
+        class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"
+      ></i>
     </div>
     <p class="text-left w-full text-sm">{{ .Description }}</p>
     <div class="w-full h-fit flex flex-row space-x-4 flex-wrap space-y-2">
       {{ range .Params.tags }}
-        <div class="px-3 py-1 rounded-full bg-pink-300 text-sm text-zinc-900 h-fit">
-          {{ . }}
-        </div>
+      <div
+        class="px-3 py-1 rounded-full bg-pink-300/50 text-sm text-zinc-900 h-fit"
+      >
+        {{ . }}
+      </div>
       {{ end }}
     </div>
   </a>
 
-
-
   {{ end }}
-
 </div>
 
 {{ end }}
+

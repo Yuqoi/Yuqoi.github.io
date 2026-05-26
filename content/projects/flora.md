@@ -1,10 +1,9 @@
 ---
-date: '2026-05-25T22:25:48Z'
-draft: true
-title: 'Flora'
+date: "2026-05-25T22:25:48Z"
+draft: false
+title: "Flora"
 
-
-description: "Just a mobile application for managing your inhouse flowers (CONTAINS AI GENERATED IMAGE)"
+description: "Just a mobile application for managing your inhouse flowers"
 
 github: "https://github.com/Yuqoi/Flora"
 # demo: "https://yuqoi.com"
@@ -13,21 +12,17 @@ tags:
   - Java
   - Android Studio
   - Firebase
-  - Image Recognition 
+  - Image Recognition
   - Mobile
   - Android
-
-header_image: /images/flora.png
 ---
 
-
-
-> The logo of this application is **AI generated** i did not make it, thus im not prous of it.
-{ .warning }
+> The logo of this application is **AI generated** i did not make it, thus im not proud of it.
+> { .warning }
 
 # Why did i make it ?
 
-I begin creating this "project" for programming competition that i was taking a place in. I created this whole app in one month so thats why it lacks a lot of things. 
+I begin creating this "project" for programming competition that i was taking a place in. I created this whole app in one month so thats why it lacks a lot of things.
 
 In general im happy that I made this project because i learned a lot about creating mobile apps in Android Studio with java
 
@@ -42,6 +37,6 @@ The project has been made in Android Studio using Java, Flora is an application 
 ## Some screenshots
 
 {{< image-row class="flex gap-4 items-center justify-center" >}}
-    {{< image src="/images/flora_1.png" alt="Flora 1" class="flex-1 w-full object-cover" >}}
-    {{< image src="/images/flora_2.png" alt="Flora 2" class="flex-1 w-full object-cover" >}}
+{{< image src="/images/flora_1.png" alt="Flora 1" class="flex-1 w-full object-cover" >}}
+{{< image src="/images/flora_2.png" alt="Flora 2" class="flex-1 w-full object-cover" >}}
 {{< /image-row >}}

@@ -17,12 +17,11 @@ tags:
   - Nextjs
   - Python
   - XGBoost
-
-header_image: /images/pp.jpg
 ---
+
 # What does this project even do ?
 
-pongstake is a simple **SaaS** website that predicts ping-pong matches (currently from <ins>**WTT league**</ins>). Simply pick your wanted matches -> pay for the result -> get pdf in mail with the results :) 
+pongstake is a simple **SaaS** website that predicts ping-pong matches (currently from <ins>**WTT league**</ins>). Simply pick your wanted matches -> pay for the result -> get pdf in mail with the results :)
 
 {{< video src="/videos/pongstake.mp4" class="rounded-none">}}
 
@@ -43,3 +42,4 @@ I created my own predicting model based on the **XGBoost algorithm** based on <u
 - refactor the architecture:
   - current architecture acts as a **"microservice"** which is not bad but thats too much for a little project. I would like to keep everything as a **monolith** for its simplicity and redesign the main backend to be in python rather than spring boot despite my liking to it :heart::kissing_closed_eyes:
 - Ship service to any cloud service
+
