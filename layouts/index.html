@@ -45,6 +45,31 @@
         </div>
       </a>
     {{ end }}
+
+    <h2 class="text-3xl font-semibold mb-2">
+      Latest projects 
+    </h2>
+
+    {{ range first 2 (where .Site.RegularPages "Section" "projects") }}
+      <a href="{{.RelPermalink}}" class="
+              blog-element
+              opacity-0
+              flex items-center gap-3
+              px-4 py-3 border border-zinc-900
+              group hover:bg-zinc-200 transition
+            ">
+        <i class="ti ti-user text-zinc-900 group-hover:text-zinc-600"></i>
+
+        <span class="group-hover:text-zinc-600">{{ .Title }}</span>
+
+        <div class="text-sm text-zinc-500 ml-auto">
+          <span class="ml-4">{{ .Date.Format "02-01-2006" }}</span>
+          <i class="ti ti-arrow-right ml-auto text-zinc-900 group-hover:text-zinc-600"></i>
+        </div>
+      </a>
+    {{ end }}
+
+    <a class="block mx-auto w-fit text-center font-light hover:text-pink-300 transition duration-300 ease " href="/projects"> And many more... click here </a>
   </div>
 
 
