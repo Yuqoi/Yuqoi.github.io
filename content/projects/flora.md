@@ -37,6 +37,6 @@ The project has been made in Android Studio using Java, Flora is an application 
 ## Some screenshots
 
 {{< image-row class="flex w-full gap-2 items-start justify-center flex-wrap" >}}
-{{< image src="/images/flora_1.png" alt="Flora 1" class="flex-1 object-cover w-full h-" >}}
-{{< image src="/images/flora_2.png" alt="Flora 2" class="flex-1 object-cover w-full h-fit" >}}
+{{< image src="/images/flora_1.png" alt="Flora 1" class="flex-1 object-contain w-50" >}}
+{{< image src="/images/flora_2.png" alt="Flora 2" class="flex-1 object-contain w-50" >}}
 {{< /image-row >}}
