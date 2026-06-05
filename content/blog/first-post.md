@@ -1,15 +1,15 @@
 ---
 date: "2026-05-14T23:57:26Z"
 draft: false
-title: "First Post"
+title: "First Post and game development"
 description: "just a first post"
 tags:
-  - go
-  - docker
-  - linux
-  - c
+  - C#
+  - S&box
+  - Game Development
 ---
 
-# I will probably never use this
+# Soon I will write something here
 
-I dont even know what to write here thank you for visiting this website.
+
+Im currently creating a game in **S&box**, once i publish it i will share my adventure
