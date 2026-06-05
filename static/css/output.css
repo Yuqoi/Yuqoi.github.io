@@ -713,6 +713,9 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-50 {
+    width: calc(var(--spacing) * 50);
+  }
   .w-fit {
     width: fit-content;
   }
@@ -833,9 +836,6 @@
   .border-l-zinc-600 {
     border-left-color: var(--color-zinc-600);
   }
-  .bg-lime-300 {
-    background-color: var(--color-lime-300);
-  }
   .bg-pink-300\/50 {
     background-color: color-mix(in srgb, oklch(82.3% 0.12 346.018) 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -864,6 +864,9 @@
   }
   .bg-clip-text {
     background-clip: text;
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
