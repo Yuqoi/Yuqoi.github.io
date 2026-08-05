@@ -5,7 +5,7 @@ work_title: Fullstack Developer
 type: Remote
 location: Warsaw
 content: |
-  - Implemented and maintained Rest API (FastAPI) for geoscan-app.com.
+  - Implemented and maintained Rest API (FastAPI) for [geoscan-app.com](https://geoscan-app.com/).
   - Created indicators for analysing certain geospatial data, using PostgreSQL with PostGIS extension, which helped and reduced time needed for calculations and reduced traffic.
   - Developed various algorithms needed for optimizing indicators.
   - Worked in developing team with Scrum methodology, maintaining Clean Code principles and practicing SOLID patterns.
